@@ -3,31 +3,26 @@
 #include <string>
 using namespace std;
 
-// Class to represent a Book
 class Book {
 public:
     string title;
     string author;
     int year;
 
-    // Constructor
     Book(const string& title, const string& author, int year)
         : title(title), author(author), year(year) {}
 };
 
-// Class to represent a Book Management System
 class BookManager {
 private:
     vector<Book> books;
 
 public:
-    // Function to add a book
     void addBook(const string& title, const string& author, int year) {
         books.push_back(Book(title, author, year));
         cout << "Book added successfully.\n";
     }
 
-    // Function to delete a book
     void deleteBook(const string& title) {
         for (int i = 0; i < books.size(); i++) {
             if (books[i].title == title) {
@@ -39,7 +34,6 @@ public:
         cout << "Book not found.\n";
     }
 
-    // Function to search for a book by title
     void searchBook(const string& title) {
         for (const Book& book : books) {
             if (book.title == title) {
@@ -64,7 +58,6 @@ public:
         }
     }
 
-    // Function to display a single book
     void displayBook(const Book& book) {
         cout << "Title: " << book.title << "\n";
         cout << "Author: " << book.author << "\n";
