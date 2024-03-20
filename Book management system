@@ -28,6 +28,7 @@ public:
             if (books[i].title == title) {
                 books.erase(books.begin() + i);
                 cout << "Book deleted successfully.\n";
+cout<<"Books are no longer available now";
                 return;
             }
         }
